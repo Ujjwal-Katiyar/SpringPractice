@@ -1,18 +1,32 @@
-package COM.SPRING.SpringRevision;
+package Injection;
+
+import java.util.List;
 
 public class Student {
 
+
+
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", rollNo=" + rollNo + ", addresh=" + addresh + "]";
+		return "Student [name=" + name + ", rollNo=" + rollNo + ", addresh=" + addresh + ", phoneNo=" + phoneNo + "]";
 	}
 
 	private String name;
 	private String rollNo;
-	private String addresh;
+
+	public List getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(List phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
+	private Addresh addresh;
+	private List phoneNo;
 
 	public String getName() {
-		
+
 		return name;
 	}
 
@@ -29,11 +43,11 @@ public class Student {
 		this.rollNo = rollNo;
 	}
 
-	public String getAddresh() {
+	public Addresh getAddresh() {
 		return addresh;
 	}
 
-	public void setAddresh(String addresh) {
+	public void setAddresh(Addresh addresh) {
 		this.addresh = addresh;
 	}
 

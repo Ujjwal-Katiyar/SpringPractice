@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+    
+    <context:annotation-config></context:annotation-config>
+	<bean class="ConstructorInjection.Addresh" name="add">
+	<constructor-arg><value>sarifapur</value> </constructor-arg>
+	<constructor-arg value="kannauj"></constructor-arg>
+	</bean>
+
+	<bean class="ConstructorInjection.Student" name="student" init-method="first" destroy-method="last"  >
+	<property name="name" value="Ujjwal"></property>
+	<property name="rollNo" value="1"></property>
+	<property name="phoneNo">
+	<list>
+	<value>09090908</value>
+	<value>3422242</value>
+	<value>3442444</value>
+	
+	</list>
+	</property>
+	
+	
+	</bean>
+	
+</beans>
